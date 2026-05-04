@@ -105,7 +105,7 @@ to handle 1M+ events per second with sub-millisecond latency.</p>
                        />
                     ))}
                   </div>
-                  <button className="capitalize border border-[#CBD5E1] pt-2 pb-2 pr-4 pl-4 mx-auto" onClick={handleCount}>load more</button>
+                  <button className="capitalize border border-[#CBD5E1] pt-2 pb-2 pr-4 pl-4 mx-auto mt-3" onClick={handleCount}>load more</button>
                   <Modal />
                </div>
             </div>
