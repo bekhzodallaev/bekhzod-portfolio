@@ -4,7 +4,7 @@ const Footer = () => {
  const date = new Date().getFullYear();
 
   return (
-    <div className='mt-8 w-[1024px] mb-4 flex items-center justify-center'>
+    <div className='mt-8 flex items-center justify-center h-[6rem]'>
         @ {date} bekhzodall.com
     </div>
   )

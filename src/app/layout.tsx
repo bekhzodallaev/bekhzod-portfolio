@@ -30,15 +30,17 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col items-center">
-      
-      <ThemeProvider attribute="class">
-                <Navbar />
-        {children}
+     <body className="min-h-screen flex flex-col">
+  <ThemeProvider attribute="class">
+    <Navbar />
 
-        <Footer />
-      </ThemeProvider>
-        </body>
+    <main className="flex-1 w-[1024px] mx-auto">
+      {children}
+    </main>
+
+    <Footer />
+  </ThemeProvider>
+</body>
     </html>
   );
 }
