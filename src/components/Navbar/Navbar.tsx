@@ -4,23 +4,26 @@ import Link from 'next/link'
 import React from 'react'
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
+import { usePathname } from 'next/navigation';
 
 
 const Navbar = () => {
   const {theme, setTheme} = useTheme();
+  const pathname = usePathname();
+
 
   return (
     <nav className='w-screen h-[64px] flex justify-center'
       style={{ backgroundColor: "var(--navbar)" }}
     >
       <div className='w-[1024px] flex justify-between items-center'>
-        <h1 className='text-[0F172A] text-[28px]'>Bekhzod Allaev</h1>
-      <div className='flex gap-[32px] text-[#64748B]'>
-         <Link href="/" className=''>Home</Link>
-         <Link href="/about">About</Link>
-         <Link href="/blog">Blog</Link>
-         <Link href="/projects">Projects</Link>
-         <Link href="/contact">Contact</Link>
+        <Link href="/" className='text-[#0F172A] text-[22px] font-liberation font-bold'>Bekhzod Allaev</Link>
+      <div className='flex gap-[32px]'>
+         <Link href="/" className={`link ${pathname === '/' ? 'text-[#0F172A] border-b-2 border-b-[#A3E635] -translate-y-1' : 'text-[#64748B]'}`} >Home</Link>
+         <Link href="/about" className={`link ${pathname === '/about' ? 'text-[#0F172A] border-b-2 border-b-[#A3E635] -translate-y-1' : 'text-[#64748B]'}`}>About</Link>
+         <Link href="/blog" className={`link ${pathname === '/blog' ? 'text-[#0F172A] border-b-2 border-b-[#A3E635] -translate-y-1' : 'text-[#64748B]'}`}>Blog</Link>
+         <Link href="/projects" className={`link ${pathname === '/projects' ? 'text-[#0F172A] border-b-2 border-b-[#A3E635] -translate-y-1' : 'text-[#64748B]'}`}>Projects</Link>
+         <Link href="/contact" className={`link ${pathname === '/contact' ? 'text-[#0F172A] border-b-2 border-b-[#A3E635] -translate-y-1' : 'text-[#64748B]'}`}>Contact</Link>
       </div>
       <div className='flex gap-[32px] items-center'>
         <button onClick={() => setTheme(theme == "dark" ? "light" : "dark")}>

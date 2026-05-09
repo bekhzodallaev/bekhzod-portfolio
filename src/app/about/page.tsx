@@ -16,10 +16,10 @@ const page= () => {
          <div className='w-[60%] flex flex-col gap-2'>
           <p className='text-[#526600] text-[12px] font-semibold'>SOFTWARE ENGINEER & ARCHITECT</p>
           <h1 className='text-[36px] font-bold'>Designing logic, crafting experiences</h1>
-          <p>I am a full-stack software engineer specialized in building scalable, high-
+          <p className='text-[#444934]'>I am a full-stack software engineer specialized in building scalable, high-
 performance web applications. My approach combines clinical technical
 rigor with a deep focus on developer experience and clean architecture.</p>
-          <p>
+          <p className='text-[#444934]'>
             Currently, I'm focusing on distributed systems and the intersection of
 modern frontend frameworks with type-safe backend environments. I
 believe in writing code that is not just functional, but maintainable and

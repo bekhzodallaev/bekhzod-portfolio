@@ -45,7 +45,7 @@ const page = () => {
      <Image src="/projects/AppTrackr.png"  fill alt="Profile Image"  className="rounded-lg"/>
          </div>
         </div>
-        <div className='flex gap-3 items-center justify-center'>
+        <div className='flex gap-3 items-center justify-between'>
             {
                 projects.map((project, index) =>(
                     <ProjectCard

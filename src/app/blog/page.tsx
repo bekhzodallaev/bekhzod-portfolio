@@ -62,8 +62,8 @@ const blogDate = [
 
 const page = () => {
   return (
-    <div>
-      <h1 className='font-bold text-[36px] mt-3'>Writing & Technical Insights</h1>
+    <div className='mt-[2rem]'>
+      <h1 className='font-bold text-[36px]'>Writing & Technical Insights</h1>
       <p className='text-[#444934]'>A collection of thoughts on software architecture, frontend performance, and the clinical
 precision of modern engineering.</p>
 

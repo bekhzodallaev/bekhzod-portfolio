@@ -13,7 +13,7 @@ type ProjectCardType = {
 }
 const ProjectCard = ({image, name, desc, webUrl, githubUrl}:ProjectCardType) => {
   return (
-    <div className='max-w-[400px] relative flex-col mt-4 p-3 gap-4'>
+    <div className='max-w-[450px] relative flex-col mt-4 p-3 gap-4'>
       <Image src={image} width={400} height={256}  alt='Project Photo' />
       <h3 className='mt-3 text-[24px] font-semibold'>{name}</h3>
       <p className='line-clamp-4'>{desc}</p>

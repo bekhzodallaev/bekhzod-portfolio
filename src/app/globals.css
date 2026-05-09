@@ -9,5 +9,65 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Charter", serif;
+}
+@font-face {
+  font-family: "Liberation Mono";
+  src: url("/fonts/liberation-mono/LiberationMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Liberation Mono";
+  src: url("/fonts/liberation-mono/LiberationMono-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Liberation Mono";
+  src: url("/fonts/liberation-mono/LiberationMono-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Liberation Mono";
+  src: url("/fonts/liberation-mono/LiberationMono-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@layer utilities {
+  .font-liberation {
+    font-family: "Liberation Mono", monospace;
+  }
+}
+
+@font-face {
+  font-family: "Charter";
+  src: url("/fonts/charter/Charter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Charter";
+  src: url("/fonts/charter/Charter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Charter";
+  src: url("/fonts/charter/Charter-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@layer utilities {
+  .font-charter {
+    font-family: "Charter", serif;
+  }
 }

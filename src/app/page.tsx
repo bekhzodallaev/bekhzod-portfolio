@@ -56,7 +56,7 @@ export default function Home() {
      <div className="flex justify-between ">
        <div className="w-[60%]">
         <h1 className="text-[36px] font-bold">Engineering scalable systems with
-<span className="text-[#526600]"> clean architecture</span> and precision.</h1>
+<span className="text-[#526600] border-b-2 border-b-[#D4FF33]"> clean architecture</span> and precision.</h1>
    <p className="text-[#444934] mt-[2rem]">I'm a Full-Stack Engineer specializing in TypeScript, Go, and Distributed Systems.
 Currently building high-performance interfaces at the intersection of technical utility and
 user experience.</p>
