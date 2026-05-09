@@ -1,5 +1,6 @@
 import React from 'react'
 import { GrFormNextLink } from "react-icons/gr";
+import Link from 'next/link';
 
 
 
@@ -9,9 +10,10 @@ type BlogListType = {
   topic:String;
   summary:String;
   duration: String;
+  slug:String;
 }
 
-const BlogList = ({date, type, topic, summary, duration}:BlogListType) => {
+const BlogList = ({date, type, topic, summary, duration, slug}:BlogListType) => {
   return (
     <div className='mt-4'>
         <div className='flex gap-3'>
@@ -24,7 +26,9 @@ const BlogList = ({date, type, topic, summary, duration}:BlogListType) => {
         <p className='text-[14px]'>{summary}</p>
         <div className='flex gap-4 items-center'>
           <p className='text-[12px]'>{duration}</p>
-          <GrFormNextLink size={25} stroke='#526600'/>
+          <Link href={`/blog/${slug}`}>
+          <GrFormNextLink />
+          </Link>
         </div>
       </div>
     </div>

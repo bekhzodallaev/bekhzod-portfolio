@@ -1,66 +1,8 @@
 import BlogList from '@/src/components/Blog/BlogList';
-import React from 'react'
-
-const blogDate = [
-  {
-    date: "2026-05-01",
-    type: "Technology",
-    topic: "Understanding Node.js Event Loop",
-    summary: "A deep dive into how the Node.js event loop works and why it enables non-blocking performance.",
-    duration: "5 min read"
-  },
-  {
-    date: "2026-05-02",
-    type: "Programming",
-    topic: "Async/Await vs Promises",
-    summary: "Comparison between async/await and promises with practical examples and best practices.",
-    duration: "4 min read"
-  },
-  {
-    date: "2026-05-03",
-    type: "Career",
-    topic: "How to Prepare for Backend Interviews",
-    summary: "Key topics, strategies, and tips to succeed in backend development interviews.",
-    duration: "6 min read"
-  },
-  {
-    date: "2026-05-04",
-    type: "Web Development",
-    topic: "Introduction to REST APIs",
-    summary: "Basics of REST architecture, HTTP methods, and how to design clean APIs.",
-    duration: "3 min read"
-  },
-  {
-    date: "2026-05-05",
-    type: "Database",
-    topic: "SQL vs NoSQL Databases",
-    summary: "Differences, use cases, and when to choose SQL or NoSQL for your project.",
-    duration: "5 min read"
-  },
-  {
-    date: "2026-05-06",
-    type: "Performance",
-    topic: "Improving API Performance in Node.js",
-    summary: "Techniques like caching, clustering, and optimizing queries to boost performance.",
-    duration: "7 min read"
-  },
-  {
-    date: "2026-05-07",
-    type: "Security",
-    topic: "Preventing SQL Injection",
-    summary: "Common vulnerabilities and how to secure your application against SQL injection attacks.",
-    duration: "4 min read"
-  },
-  {
-    date: "2026-05-08",
-    type: "Architecture",
-    topic: "Microservices vs Monolith",
-    summary: "Pros and cons of microservices and monolithic architectures with real-world scenarios.",
-    duration: "6 min read"
-  }
-];
+import { getAllPosts } from '@/src/lib/blog/getAllPosts';
 
 const page = () => {
+  const posts = getAllPosts();
   return (
     <div className='mt-[2rem]'>
       <h1 className='font-bold text-[36px]'>Writing & Technical Insights</h1>
@@ -93,13 +35,15 @@ component flexibility.
         </div>
            <div className='h-[1px] bg-[#C5C9AD] mb-5'></div>
 
-           {blogDate.map((blog, index) =>(
+           {posts.map((blog, index) =>(
             <BlogList
-             type={blog.type}
-             topic={blog.topic}
-             summary={blog.summary}
+            key={blog.slug}
+             type={blog.tags}
+             topic={blog.title}
+             summary={blog.description}
              date={blog.date}
-             duration={blog.duration}
+             duration="5 min"
+             slug={blog.slug}
             />
            ))}
     </div>
