@@ -2,8 +2,9 @@
 title: "Why I Started Learning Backend Development"
 description: "My journey from frontend development into backend engineering."
 date: "2026-04-28"
-tags: "Backend"
+tags: ["Backend", "Career"]
 cover: "/images/backend-journey.png"
+featured: false
 ---
 
 # Why I Started Learning Backend Development

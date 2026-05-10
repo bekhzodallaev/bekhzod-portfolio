@@ -40,10 +40,10 @@ component flexibility.
             key={blog.slug}
              type={blog.tags}
              topic={blog.title}
-             summary={blog.description}
              date={blog.date}
              duration="5 min"
              slug={blog.slug}
+             summary={blog.description}
             />
            ))}
     </div>

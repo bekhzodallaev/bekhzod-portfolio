@@ -4,10 +4,11 @@ import path from "path";
 
 type Frontmatter = {
   title: string;
-  description: string;
+  description?: string;
   date: string;
-  tags: string;
+  tags: string[];
   cover: string;
+  featured?:boolean
 };
 
 export type PostMeta = Frontmatter & {

@@ -2,8 +2,9 @@
 title: "Understanding Redis for Beginners"
 description: "A simple introduction to Redis and why it is useful in backend systems."
 date: "2026-05-01"
-tags: "Backend"
+tags: ["Backend", "Distributed Systems"]
 cover: "/images/redis.png"
+featured: false
 ---
 
 # Understanding Redis for Beginners

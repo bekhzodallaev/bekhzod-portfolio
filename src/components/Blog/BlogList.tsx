@@ -5,12 +5,12 @@ import Link from 'next/link';
 
 
 type BlogListType = {
-  date:String;
-  type:String;
-  topic:String;
-  summary:String;
-  duration: String;
-  slug:String;
+  date:string;
+  type:string[];
+  topic:string;
+  summary?:string;
+  duration: string;
+  slug:string;
 }
 
 const BlogList = ({date, type, topic, summary, duration, slug}:BlogListType) => {
@@ -19,9 +19,13 @@ const BlogList = ({date, type, topic, summary, duration, slug}:BlogListType) => 
         <div className='flex gap-3'>
       <p className='w-[150px] flex-shrink-0'>{date}</p>
       <div className='flex flex-col gap-3'>
-        <div className='bordered border-1 border-[#5D6D84] pr-1 pl-1 rounded self-start'>
-            <p className='text-[#526600]'>{type}</p>
+           <div className='flex gap-3'>
+             {type.map(t => (
+            <div className='bordered border-1 border-[#5D6D84] pr-1 pl-1 rounded self-start'>
+            <p className='text-[#526600]'>{t}</p>
         </div>
+          ))}
+           </div>
         <h3 className='text-[24px] font-semibold'>{topic}</h3>
         <p className='text-[14px]'>{summary}</p>
         <div className='flex gap-4 items-center'>
