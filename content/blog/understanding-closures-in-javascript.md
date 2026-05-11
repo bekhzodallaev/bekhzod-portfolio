@@ -2,9 +2,11 @@
 title: "Understanding Closures in JavaScript"
 description: "Learn how closures work internally in JavaScript and how they help create powerful patterns for state management and encapsulation."
 date: "2026-04-10"
-tags: ["Backend", "Career"]
+tags: ["Backend"]
 cover: "/images/backend-journey.png"
 featured: false
+category: "Technical"
+duration: "10 min"
 ---
 
 # Understanding Closures in JavaScript

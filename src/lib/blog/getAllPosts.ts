@@ -9,7 +9,10 @@ type Frontmatter = {
   tags: string[];
   cover: string;
   featured?:boolean
+  duration:string
+  category:string
 };
+
 
 export type PostMeta = Frontmatter & {
   slug: string;

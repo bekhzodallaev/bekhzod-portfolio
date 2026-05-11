@@ -1,5 +1,6 @@
 import BlogList from '@/src/components/Blog/BlogList';
 import { getAllPosts } from '@/src/lib/blog/getAllPosts';
+import BlogFilter from './BlogFilter';
 
 const page = () => {
   const posts = getAllPosts();
@@ -25,27 +26,7 @@ component flexibility.
 
        </div>
      </div>
-        <div className='flex justify-between mt-5'>
-            <h3 className='text-[12px]'>RECENT BLOGS</h3>
-            <div className='text-[12px] text-[#5D6D84] flex gap-3'>
-                <p>All</p>
-                <p>Technical</p>
-                <p>Career</p>
-            </div>
-        </div>
-           <div className='h-[1px] bg-[#C5C9AD] mb-5'></div>
-
-           {posts.map((blog, index) =>(
-            <BlogList
-            key={blog.slug}
-             type={blog.tags}
-             topic={blog.title}
-             date={blog.date}
-             duration="5 min"
-             slug={blog.slug}
-             summary={blog.description}
-            />
-           ))}
+       <BlogFilter blogs={posts} />
     </div>
   )
 }

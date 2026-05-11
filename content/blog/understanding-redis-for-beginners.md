@@ -5,6 +5,8 @@ date: "2026-05-01"
 tags: ["Backend", "Distributed Systems"]
 cover: "/images/redis.png"
 featured: false
+category: "Technical"
+duration: "10 min"
 ---
 
 # Understanding Redis for Beginners
