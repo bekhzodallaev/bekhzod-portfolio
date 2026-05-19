@@ -9,8 +9,6 @@ category: "Technical"
 duration: "10 min"
 ---
 
-# Understanding Redis for Beginners
-
 Redis is an in-memory data store often used for caching and session management.
 
 ## Why Redis Is Fast

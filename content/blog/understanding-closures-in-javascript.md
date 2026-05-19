@@ -9,8 +9,6 @@ category: "Technical"
 duration: "10 min"
 ---
 
-# Understanding Closures in JavaScript
-
 Closures are one of the most important concepts in JavaScript. They allow functions to access variables from their outer scope even after the outer function has finished executing.
 
 ## Why Closures Matter

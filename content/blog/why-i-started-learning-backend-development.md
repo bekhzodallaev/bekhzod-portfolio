@@ -9,8 +9,6 @@ category: "Career"
 duration: "10 min"
 ---
 
-# Why I Started Learning Backend Development
-
 I originally started with frontend development using React and JavaScript.
 
 Over time, I became interested in how systems work behind the scenes.

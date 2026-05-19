@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Welcome to DevGuru",
+  title: "DevGuru",
   description: "Yeah, you are in a correct spot.",
 };
 

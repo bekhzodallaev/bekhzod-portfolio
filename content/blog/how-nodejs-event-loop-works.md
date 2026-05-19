@@ -9,8 +9,6 @@ category: "Technical"
 duration: "10 min"
 ---
 
-# How the Node.js Event Loop Really Works
-
 The Node.js event loop is what allows JavaScript to perform non-blocking asynchronous operations.
 
 ## Event Loop Phases
