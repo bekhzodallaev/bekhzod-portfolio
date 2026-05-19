@@ -31,15 +31,15 @@ const BlogFilter = ({ blogs }: BlogFilterProps) => {
             <h3 className='text-[12px]'>RECENT BLOGS</h3>
         <div className="flex gap-3 items-center text-[12px] text-[#5D6D84]">
         
-        <button onClick={() => setCategory('All')}>
+        <button onClick={() => setCategory('All')} className='cursor-pointer'>
           All
         </button>
 
-        <button onClick={() => setCategory('Technical')}>
+        <button onClick={() => setCategory('Technical')} className='cursor-pointer'>
           Technical
         </button>
 
-        <button onClick={() => setCategory('Career')}>
+        <button onClick={() => setCategory('Career')} className='cursor-pointer'>
           Career
         </button>
       </div>

@@ -3,7 +3,7 @@ title: "How the Node.js Event Loop Really Works"
 description: "A deep dive into the Node.js event loop, covering phases, microtasks, callbacks, and asynchronous execution."
 date: "2026-04-12"
 tags: ["Backend"]
-cover: "/images/backend-journey.png"
+cover: "/blog/eventloop.jpg"
 featured: true
 category: "Technical"
 ---
