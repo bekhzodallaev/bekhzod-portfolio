@@ -1,7 +1,6 @@
-import ReactMarkdown from "react-markdown";
 import { getPostBySlug } from "@/src/lib/blog/getAllPosts";
 import Button from "@/src/components/Button/Button";
-import Footer from "@/src/components/Footer/Footer";
+import { MDXRemote } from "next-mdx-remote/rsc";
 
 type Props = {
   params: Promise<{
@@ -22,9 +21,8 @@ const Page = async ({ params }: Props) => {
       <p className="mb-3 text-[#5D6D84]">{post.metadata.date}</p>
       <h1 className="text-[36px] font-bold">{post.metadata.title}</h1>
       <p className="text-[20px] mb-2">{post.metadata.description}</p>
-      <ReactMarkdown>
-        {post.content}
-      </ReactMarkdown>
+      
+      <MDXRemote source={post.content}/>
           </article>
   );
 };

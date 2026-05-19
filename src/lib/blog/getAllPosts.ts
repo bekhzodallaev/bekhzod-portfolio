@@ -36,7 +36,7 @@ const loadAllPosts = () => {
 
   const files = fs
     .readdirSync(postsDir)
-    .filter(file => file.endsWith(".md"));
+    .filter(file => file.endsWith(".md") || file.endsWith(".mdx"));
 
   cachedPosts = files.map(file => {
     const slug = path.parse(file).name;
