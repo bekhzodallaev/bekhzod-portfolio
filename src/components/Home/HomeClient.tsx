@@ -16,6 +16,7 @@ type BlogType = {
   cover: string;
   slug:string;
   featured?:boolean
+  readingTime:string;
 };
 
 type HomeClientProps = {
@@ -90,7 +91,7 @@ user experience.</p>
               <h1 className="text-[36px] font-bold">{featuredPost?.title}</h1>
               <p className="text-[#444934]">{featuredPost?.description}</p>
               <div className="flex gap-3 items-center">
-              <p>{featuredPost?.date} 8 min read</p>
+              <p>{featuredPost?.date} / {featuredPost?.readingTime}</p>
                <Link href={`/blog/${featuredPost?.slug}`}>
              <GrFormNextLink size={25} />
              </Link>

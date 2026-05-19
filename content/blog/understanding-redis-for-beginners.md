@@ -6,7 +6,6 @@ tags: ["Backend", "Distributed Systems"]
 cover: "/images/redis.png"
 featured: false
 category: "Technical"
-duration: "10 min"
 ---
 
 Redis is an in-memory data store often used for caching and session management.

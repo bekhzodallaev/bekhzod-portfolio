@@ -18,7 +18,11 @@ const Page = async ({ params }: Props) => {
   return (
     <article className="mt-[2rem]">
       <Button />
-      <p className="mb-3 text-[#5D6D84]">{post.metadata.date}</p>
+      <div className="flex gap-3 mb-3  text-[#5D6D84]">
+              <span>{post.metadata.date}</span>
+              <span>/</span>
+             <span>{post.metadata.readingTime}</span>
+      </div>
       <h1 className="text-[36px] font-bold">{post.metadata.title}</h1>
       <p className="text-[20px] mb-2">{post.metadata.description}</p>
       

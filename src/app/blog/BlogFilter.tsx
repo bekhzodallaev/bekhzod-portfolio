@@ -8,9 +8,9 @@ type BlogType = {
   tags: string[];
   title: string;
   description?: string;
-  duration: string;
   slug: string;
   category:string;
+  readingTime:string;
 };
 
 type BlogFilterProps = {
@@ -54,7 +54,7 @@ const BlogFilter = ({ blogs }: BlogFilterProps) => {
             type={blog.tags}
             topic={blog.title}
             date={blog.date}
-            duration={blog.duration}
+            readingTime={blog.readingTime}
             slug={blog.slug}
             summary={blog.description}
           />

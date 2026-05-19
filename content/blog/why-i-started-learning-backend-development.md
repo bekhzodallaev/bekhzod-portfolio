@@ -6,7 +6,6 @@ tags: ["Backend"]
 cover: "/images/backend-journey.png"
 featured: false
 category: "Career"
-duration: "10 min"
 ---
 
 I originally started with frontend development using React and JavaScript.

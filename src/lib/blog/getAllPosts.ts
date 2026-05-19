@@ -1,6 +1,7 @@
-import fs from "fs";
+import fs, { read } from "fs";
 import matter from "gray-matter";
 import path from "path";
+import readingTime from "reading-time";
 
 type Frontmatter = {
   title: string;
@@ -16,6 +17,7 @@ type Frontmatter = {
 
 export type PostMeta = Frontmatter & {
   slug: string;
+  readingTime:string;
 };
 
 type Post = {
@@ -47,10 +49,12 @@ const loadAllPosts = () => {
     );
 
     const { data, content } = matter(fileContent);
-
+    
+    const stats = readingTime(content);
     const metadata: PostMeta = {
       ...(data as Frontmatter),
       slug,
+      readingTime:stats.text
     };
 
     cachedPostContents[slug] = {

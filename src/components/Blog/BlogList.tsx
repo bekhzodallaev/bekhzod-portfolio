@@ -9,11 +9,11 @@ type BlogListType = {
   type:string[];
   topic:string;
   summary?:string;
-  duration: string;
   slug:string;
+  readingTime:string;
 }
 
-const BlogList = ({date, type, topic, summary, duration, slug}:BlogListType) => {
+const BlogList = ({date, type, topic, summary, readingTime, slug}:BlogListType) => {
   return (
     <div className='mt-4'>
         <div className='flex gap-3'>
@@ -29,7 +29,7 @@ const BlogList = ({date, type, topic, summary, duration, slug}:BlogListType) => 
         <h3 className='text-[24px] font-semibold'>{topic}</h3>
         <p className='text-[14px]'>{summary}</p>
         <div className='flex gap-4 items-center'>
-          <p className='text-[12px]'>{duration}</p>
+          <p className='text-[12px]'>{readingTime}</p>
           <Link href={`/blog/${slug}`}>
           <GrFormNextLink />
           </Link>
