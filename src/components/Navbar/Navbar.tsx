@@ -13,7 +13,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className='w-screen h-[64px] flex justify-center'
+    <nav className='w-screen h-[64px] flex justify-center sticky top-0 z-50'
       style={{ backgroundColor: "var(--navbar)" }}
     >
       <div className='w-[1024px] flex justify-between items-center'>

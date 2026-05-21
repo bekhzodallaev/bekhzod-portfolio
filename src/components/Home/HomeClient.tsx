@@ -44,7 +44,13 @@ const HomeClient = ({blogs}:HomeClientProps) => {
      <div className="flex justify-between ">
        <div className="w-[60%]">
         <h1 className="text-[36px] font-bold">Engineering scalable systems with
-<span className="text-[#526600] border-b-2 border-b-[#D4FF33]"> clean architecture</span> and precision.</h1>
+<span className="text-[#526600] border-b-2 border-b-[#D4FF33]
+         hover-200
+                  transition-colors
+                  duration-200
+                 hover:border-b-[#526600]
+                 group
+"> clean architecture</span> and precision.</h1>
    <p className="text-[#444934] mt-[2rem]">I'm a Full-Stack Engineer specializing in TypeScript, Go, and Distributed Systems.
 Currently building high-performance interfaces at the intersection of technical utility and
 user experience.</p>
@@ -65,13 +71,25 @@ user experience.</p>
        <div className="mt-[4rem]">
            <div className="flex justify-between items-center mb-3">
             <h1 className="text-[24px]">Featured Article</h1>
-             <Link href="/blog" className='text-[#526600]'>View all posts</Link>
+             <Link href="/blog" className='text-[#526600]
+                  border-b border-transparent
+                  hover-200
+                  transition-colors
+                  duration-200
+                 hover:border-b-[#526600]
+                 group
+             '>View all posts</Link>
              <h1 className="text-[24px]">Technical Logs</h1>
             </div>  
             
             <div className="w-full flex items-start justfiy-between gap-[24px]">
 
-            <div className="bg-white w-[60%] p-4 rounded">
+            <div className="bg-white w-[60%] p-4 rounded
+              border border-transparent
+        transition-colors duration-200
+        hover:border-[#D4FF33]
+        group
+            ">
              <div className="flex gap-3 flex-wrap">
                 {featuredPost?.tags.map((tag, index) => (
                   <p
@@ -88,7 +106,10 @@ user experience.</p>
               </p>
             ))}
             </div>
-              <h1 className="text-[36px] font-bold">{featuredPost?.title}</h1>
+              <h1 className="text-[36px] font-bold
+               transition-colors duration-200
+          group-hover:text-[#526600]
+              ">{featuredPost?.title}</h1>
               <p className="text-[#444934]">{featuredPost?.description}</p>
               <div className="flex gap-3 items-center">
               <p>{featuredPost?.date} / {featuredPost?.readingTime}</p>
@@ -109,7 +130,16 @@ user experience.</p>
                        />
                     ))}
                   </div>
-                  <button className="capitalize border border-[#CBD5E1] pt-2 pb-2 pr-4 pl-4 mx-auto mt-3" onClick={handleCount}>load more</button>
+                  <button className="capitalize border w-full border-dashed border-[#CBD5E1] pt-2 pb-2 pr-4 pl-4 mx-auto mt-3
+                    hover-200
+                     border
+                  transition-colors
+                  duration-200
+                 hover:border-[#7A8F1A]
+                 group
+                 hover:bg-white
+                 hover:text-[#526600]
+                  " onClick={handleCount}>LOAD MORE LOGS</button>
                   <Modal />
                </div>
             </div>

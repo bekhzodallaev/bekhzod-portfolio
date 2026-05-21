@@ -27,11 +27,29 @@ self-documenting.
           </p>
            <div className='flex justify-evenly mt-3'>
             
-            <div className='flex gap-2 pt-2 pb-2 pr-3 pl-3 rounded border-1 items-center border-[#C5C9AD]'>
+            <div className='flex gap-2 pt-2 pb-2 pr-3 pl-3 rounded border-1 items-center border-[#C5C9AD]
+                hover-200
+                     border
+                  transition-colors
+                  duration-200
+                 hover:border-[#7A8F1A]
+                 group
+                 hover:bg-white
+                 hover:text-[#526600]
+            '>
                 <MdTerminal size={25} fill='#526600'/>
                 <p>2+ Years Exp.</p>
             </div>
-            <div className='flex gap-2 flex gap-2 pt-2 pb-2 pr-3 pl-3 rounded border-1 items-center border-[#C5C9AD]'>
+            <div className='flex gap-2 flex gap-2 pt-2 pb-2 pr-3 pl-3 rounded border-1 items-center border-[#C5C9AD]
+             hover-200
+                     border
+                  transition-colors
+                  duration-200
+                 hover:border-[#7A8F1A]
+                 group
+                 hover:bg-white
+                 hover:text-[#526600]
+            '>
                <SlLocationPin size={25} fill='#526600'/>
                <p>Warsaw, Poland</p> 
             </div>

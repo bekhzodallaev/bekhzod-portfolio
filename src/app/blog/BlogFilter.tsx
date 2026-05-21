@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import BlogList from '@/src/components/Blog/BlogList';
+import Link from 'next/link';
 
 type BlogType = {
   date: string;
@@ -17,13 +18,27 @@ type BlogFilterProps = {
   blogs: BlogType[];
 };
 
+const BLOGS_PER_PAGE = 3;
+
 const BlogFilter = ({ blogs }: BlogFilterProps) => {
   const [category, setCategory] = useState('All');
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredBlogs =
     category === 'All'
       ? blogs
       : blogs.filter((blog) => blog.category === category);
+
+  
+const totalPages = Math.ceil(filteredBlogs.length / BLOGS_PER_PAGE);
+const startIndex= (currentPage -1) * BLOGS_PER_PAGE;
+const paginatedBlogs = filteredBlogs.slice(startIndex, startIndex + BLOGS_PER_PAGE);
+
+const handleCategoryChange = (newCategory:string) =>{
+  setCategory(newCategory);
+  setCurrentPage(1);
+
+}
 
   return (
     <div>
@@ -31,15 +46,15 @@ const BlogFilter = ({ blogs }: BlogFilterProps) => {
             <h3 className='text-[12px]'>RECENT BLOGS</h3>
         <div className="flex gap-3 items-center text-[12px] text-[#5D6D84]">
         
-        <button onClick={() => setCategory('All')} className='cursor-pointer'>
+        <button onClick={() => handleCategoryChange('All')} className='cursor-pointer'>
           All
         </button>
 
-        <button onClick={() => setCategory('Technical')} className='cursor-pointer'>
+        <button onClick={() => handleCategoryChange('Technical')} className='cursor-pointer'>
           Technical
         </button>
 
-        <button onClick={() => setCategory('Career')} className='cursor-pointer'>
+        <button onClick={() => handleCategoryChange('Career')} className='cursor-pointer'>
           Career
         </button>
       </div>
@@ -48,7 +63,7 @@ const BlogFilter = ({ blogs }: BlogFilterProps) => {
       <div className="h-[1px] bg-[#C5C9AD] mb-5 mt-3"></div>
 
       <div className="flex flex-col gap-5">
-        {filteredBlogs.map((blog) => (
+        {paginatedBlogs.map((blog) => (
           <BlogList
             key={blog.slug}
             type={blog.tags}
@@ -59,6 +74,69 @@ const BlogFilter = ({ blogs }: BlogFilterProps) => {
             summary={blog.description}
           />
         ))}
+      </div>
+
+       <div className="flex justify-center gap-3 mt-10">
+      <button
+  disabled={currentPage === 1}
+  onClick={() => setCurrentPage((prev) => prev - 1)}
+  className="
+   border border-[#C5C9AD]
+    px-4 py-2
+    transition duration-200
+    opacity-60
+    hover:opacity-90
+    active:scale-95
+    focus:outline-none
+    disabled:opacity-40
+    disabled:cursor-not-allowed
+    cursor-pointer
+    rounded
+  "
+>
+  Previous
+</button>
+
+{Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+  <button
+    key={page}
+    onClick={() => setCurrentPage(page)}
+    className={`
+      border border-[#C5C9AD]
+      px-4 py-2
+      transition duration-200
+      opacity-60
+      hover:opacity-90
+      active:scale-95
+      focus:outline-none
+      cursor-pointer
+      rounded
+      ${currentPage === page ? 'bg-[#D4FF33]' : ''}
+    `}
+  >
+    {page}
+  </button>
+))}
+
+<button
+  disabled={currentPage === totalPages}
+  onClick={() => setCurrentPage((prev) => prev + 1)}
+  className="
+    border border-[#C5C9AD]
+    px-4 py-2
+    transition duration-200
+    opacity-60
+    hover:opacity-90
+    active:scale-95
+    focus:outline-none
+    disabled:opacity-40
+    disabled:cursor-not-allowed
+    cursor-pointer
+    rounded
+  "
+>
+  Next
+</button>
       </div>
     </div>
   );
