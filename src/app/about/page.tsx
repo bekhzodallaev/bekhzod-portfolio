@@ -109,14 +109,31 @@ self-documenting.
   <div className="flex-1 h-[1px] bg-[#C5C9AD]"></div>
 </div>
      <div className='mt-3 flex justify-start gap-4'>
-        <div className='flex gap-3 pt-2 pb-2 pl-3 pr-3 border-[#C5C9AD] border-1 rounded items-center'>
+        <div className='flex gap-3 pt-2 pb-2 pl-3 pr-3 border-[#C5C9AD] border-1 rounded items-center 
+        hover-200
+                     border
+                  transition-colors
+                  duration-200
+                 hover:border-[#7A8F1A]
+                 group
+                 hover:bg-white
+                 hover:text-[#526600]'>
           <FaUniversity fill='#526600'  size={25}/>
           <div>
             <h3 className='font-semibold'>Bachelor of Computer Science</h3>
             <p className='text-[13px]'>Vizja University</p>
           </div>
         </div>
-        <div className='flex gap-3 pt-2 pb-2 pl-3 pr-3 border-[#C5C9AD] border-1 rounded items-center'>
+        <div className='flex gap-3 pt-2 pb-2 pl-3 pr-3 border-[#C5C9AD] border-1 rounded items-center
+        hover-200
+                     border
+                  transition-colors
+                  duration-200
+                 hover:border-[#7A8F1A]
+                 group
+                 hover:bg-white
+                 hover:text-[#526600]
+        '>
           <Si42 fill='#526600'  size={25}/>
           <div>
             <h3 className='font-semibold'>Peer-to-Peer Programming</h3>

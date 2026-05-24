@@ -15,8 +15,14 @@ type BlogListType = {
 
 const BlogList = ({date, type, topic, summary, readingTime, slug}:BlogListType) => {
   return (
-    <div className='mt-4'>
-        <div className='flex gap-3'>
+    <div className='mt-4
+      hover-200
+      transition-colors
+      duration-200
+      group
+    '>
+        <div className='flex gap-3 
+        '>
       <p className='w-[150px] flex-shrink-0'>{date}</p>
       <div className='flex flex-col gap-3'>
            <div className='flex gap-3'>
@@ -26,7 +32,9 @@ const BlogList = ({date, type, topic, summary, readingTime, slug}:BlogListType) 
         </div>
           ))}
            </div>
-        <h3 className='text-[24px] font-semibold'>{topic}</h3>
+        <h3 className='text-[24px] font-semibold
+        transition-colors duration-200 group-hover:text-[#526600]
+        '>{topic}</h3>
         <p className='text-[14px]'>{summary}</p>
         <div className='flex gap-4 items-center'>
           <p className='text-[12px]'>{readingTime}</p>
