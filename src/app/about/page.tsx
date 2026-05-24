@@ -12,7 +12,7 @@ import { Si42 } from "react-icons/si";
 const page= () => {
   return (
     <div>
-       <div className='flex justify-between mt-[2rem] w-full'>
+       <div className='flex justify-between mt-[2rem] w-full gap-2'>
          <div className='w-[60%] flex flex-col gap-2'>
           <p className='text-[#526600] text-[12px] font-semibold'>SOFTWARE ENGINEER & ARCHITECT</p>
           <h1 className='text-[36px] font-bold'>Designing logic, crafting experiences</h1>
@@ -56,8 +56,8 @@ self-documenting.
            </div>
         </div>
 
-        <div>
-        <Image src="/profile/profile.jpeg"  width={256} height={256} alt="Profile Image"  className="rounded-lg"/>
+        <div className='w-[34%] relative h-[350px] overflow-hidden rounded-lg'>
+        <Image src="/profile/profile02.jpeg"  fill alt="Profile Image"  className="rounded-lg object-cover object-[78%_50%]"/>
         </div>
        </div>
         <div className="flex items-center gap-4 mt-5">

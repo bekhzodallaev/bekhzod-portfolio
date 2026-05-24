@@ -28,13 +28,13 @@ const ProjectCard = ({image, name, desc, webUrl, githubUrl}:ProjectCardType) => 
       <p className='line-clamp-4'>{desc}</p>
       <div className='flex justify-evenly mt-5'>
                       <div className='flex gap-3 items-center'>
-                          <a href={webUrl} className='flex gap-3 items-center transition-colors duration-200 group-hover:text-[#526600]' rel="noopener noreferrer">
+                          <a href={webUrl} className='flex gap-3 items-center transition-colors duration-200 hover:text-[#526600]' rel="noopener noreferrer">
                            <TbExternalLink />
                            Live Demo
                           </a>
                       </div>
                       <div className='flex gap-3 items-center'>
-                          <a href={githubUrl} className='flex gap-3 items-center transition-colors duration-200 group-hover:text-[#526600]' target='_blank' rel="noopener noreferrer">
+                          <a href={githubUrl} className='flex gap-3 items-center transition-colors duration-200 hover:text-[#526600]' target='_blank' rel="noopener noreferrer">
                            <FaCode />
                             View Code
                           </a>

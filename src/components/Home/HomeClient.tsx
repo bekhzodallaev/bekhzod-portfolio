@@ -42,7 +42,7 @@ const HomeClient = ({blogs}:HomeClientProps) => {
   return (
    <div className=" max-w-[1024px] mt-[2rem]">
      <div className="flex justify-between ">
-       <div className="w-[60%]">
+       <div className="w-[65%]">
         <h1 className="text-[36px] font-bold">Engineering scalable systems with
 <span className="text-[#526600] border-b-2 border-b-[#D4FF33]
          hover-200
@@ -63,9 +63,15 @@ user experience.</p>
           </a>
         </div>
        </div>
-       <div className="w-[40%] flex justify-center">
-        <Image src="/profile/profile.jpeg"  width={256} height={256} alt="Profile Image"  className="rounded-lg"/>
-       </div>
+      <div className="w-[32%] relative h-[350px] overflow-hidden rounded-lg">
+  <Image
+    src="/profile/profile.jpeg"
+    fill
+    alt="Profile Image"
+    className="object-cover object-center"
+    priority
+  />
+</div>
      </div>
 
        <div className="mt-[4rem]">
