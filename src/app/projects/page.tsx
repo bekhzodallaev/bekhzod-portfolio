@@ -34,7 +34,7 @@ const page = () => {
             </div>
             <div className='flex justify-evenly mt-5'>
                 <div className='flex gap-3 items-center'>
-                    <a href="https://application-tracking-system-eta.vercel.app/" className='flex gap-3 items-center transition-colors duration-200 group-hover:text-[#526600]' target='_blank' rel="noopener noreferrer"
+                    <a href="https://application-tracking-system-eta.vercel.app/" className='flex gap-3 items-center transition-colors duration-200 hover:text-[#526600]' target='_blank' rel="noopener noreferrer"
                     aria-label="Open live demo in new tab"
                     >
                      <TbExternalLink />
@@ -42,7 +42,7 @@ const page = () => {
                     </a>
                 </div>
                 <div className='flex gap-3 items-center'>
-                    <a href="https://github.com/bekhzodallaev/Application-Tracking-System" className='flex gap-3 items-center transition-colors duration-200 group-hover:text-[#526600]' target='_blank' rel="noopener noreferrer"
+                    <a href="https://github.com/bekhzodallaev/Application-Tracking-System" className='flex gap-3 items-center transition-colors duration-200 hover:text-[#526600]' target='_blank' rel="noopener noreferrer"
                     aria-label="Open live demo in new tab"
                     >
                      <FaCode />
