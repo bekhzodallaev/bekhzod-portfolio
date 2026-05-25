@@ -46,15 +46,21 @@ const handleCategoryChange = (newCategory:string) =>{
             <h3 className='text-[12px]'>RECENT BLOGS</h3>
         <div className="flex gap-3 items-center text-[12px] text-[#5D6D84]">
         
-        <button onClick={() => handleCategoryChange('All')} className='cursor-pointer'>
+        <button onClick={() => handleCategoryChange('All')} className={`cursor-pointer transition-colors duration-200 ${category == "All" ? 
+          'bg-[#D4FF33] text-[#64748B] px-3 py-1 rounded':'text-[#5D6D84] hover:text-[#526600]'
+        }`}>
           All
         </button>
 
-        <button onClick={() => handleCategoryChange('Technical')} className='cursor-pointer'>
+        <button onClick={() => handleCategoryChange('Technical')} className={`cursor-pointer transition-colors duration-200 ${category == "Technical" ? 
+          'bg-[#D4FF33] text-[#64748B] px-3 py-1 rounded':'text-[#5D6D84] hover:text-[#526600]'
+        }`}>
           Technical
         </button>
 
-        <button onClick={() => handleCategoryChange('Career')} className='cursor-pointer'>
+        <button onClick={() => handleCategoryChange('Career')}className={`cursor-pointer transition-colors duration-200 ${category == "Career" ? 
+          'bg-[#D4FF33] text-[#64748B] px-3 py-1 rounded':'text-[#5D6D84] hover:text-[#526600]'
+        }`}>
           Career
         </button>
       </div>
