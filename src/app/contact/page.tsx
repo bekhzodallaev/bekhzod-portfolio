@@ -4,6 +4,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineExternalLink } from "react-icons/hi";
+import ContactForm from '@/src/components/Contact/ContactForm';
 
 const page = () => {
     return (
@@ -13,46 +14,7 @@ const page = () => {
    
             
             <div className='flex justify-between gap-5 mt-5'>
-
-            <form action="" method="post" className='border-1 border-[#C5C9AD] bg-white rounded p-4 flex flex-col gap-3 w-[60%] self-start'>
-                 <div className='flex justify-between gap-3'>
-                       <div className='flex flex-col gap-1'>
-                    <label htmlFor="Name" className='text-[12px] font-semibold text-[#444934]'>NAME</label>
-                    <input type="text" name="Name" id="Name"  placeholder='Adam Smith' className='border-1 border-[#C5C9AD] rounded pt-1 pb-1 pl-2 pr-2 outline-none min-w-[250px]
-                     focus-200
-      transition-colors
-      duration-200
-      focus:border-[#526600]
-                    '/>
-                </div>
-                <div className='flex flex-col gap-1'>
-                    <label htmlFor="Email" className='text-[12px] font-semibold text-[#444934]'>EMAIL</label>
-                    <input type="email" name="Email" id="Email" placeholder='adamsmith@gmail.com' className=' border-1 border-[#C5C9AD] rounded pt-1 pb-1 pl-2 pr-2 outline-none 
-                    focus-200
-      transition-colors
-      duration-200
-      focus:border-[#526600]
-                    min-w-[250px]'/>
-                </div>
-                 </div>
-                 <div>
-                 <label htmlFor="MESSAGE" className='text-[12px] font-semibold text-[#444934]'>MESSAGE</label><br />
-                  <textarea name="MESSAGE" id="MESSAGE" rows={6} className='p-3 border-1 border-[#C5C9AD] resize-none rounded outline-none w-full focus-200
-      transition-colors
-      duration-200
-      focus:border-[#526600]' placeholder='How can I help you?'></textarea>
-                 </div>
-
-                 <button className='rounded pt-2 pb-2 pr-4 pl-4  flex items-center justify-center gap-2 bg-[#D4FF33] self-start
-         hover-200
-      transition-colors
-      duration-200
-      hover:bg-[#acc92b]
-                 '>
-                    <span className='text-[#5E7400]' >SEND MESSAGE</span>
-                   <MdSend  fill='#5E7400'/>
-                 </button>
-            </form>
+              <ContactForm />
               <div className='w-[40%] flex flex-col gap-3'>
                   <div className='w-full border-[#C5C9AD] border-1 self-start p-3'>
                 <div className='  p-3 bg-white w-full h-[200px] rounded overflow-hidden mb-4'>
