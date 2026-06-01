@@ -59,7 +59,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="border-1 border-[#C5C9AD] bg-white rounded p-4 flex flex-col gap-3 w-[60%] self-start"
+      className="border-1 border-[#C5C9AD] bg-white rounded p-4 flex flex-col gap-3 w-[60%] self-start dark:bg-[#131313]"
     >
       <div className="flex justify-between gap-3">
         <div className="flex flex-col gap-1">

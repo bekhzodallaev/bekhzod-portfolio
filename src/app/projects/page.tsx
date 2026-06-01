@@ -17,6 +17,7 @@ const page = () => {
       duration-200
       hover:bg-white
       group
+      dark:hover:bg-black
         '>
          <div className='w-[50%] self-start'>
            <p className='bg-[#D4FF33] text-[12px] inline-block'>LATEST</p>

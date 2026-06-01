@@ -23,6 +23,7 @@ const Blogs = ({ tags, date, title, slug }: BlogType) => {
         transition-colors duration-200
         hover:border-[#D4FF33]
         group
+        dark:bg-black
       "
     >
       <div className="flex gap-3">

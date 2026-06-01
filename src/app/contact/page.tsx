@@ -39,10 +39,10 @@ const page = () => {
                 <div className='flex justify-between border-1 border-[#C5C9AD] p-4 rounded items-center bg-white  hover-200
       transition-colors
       duration-200
-      hover:border-[#526600]'>
+      hover:border-[#526600] dark:bg-[#131313]'>
                     <div className='flex justify-start gap-4'>
-                         <div className=' bg-[#F2F4F6] rounded p-3'>
-                    <FaGithub />
+                         <div className=' bg-[#F2F4F6] rounded p-3 '>
+                    <FaGithub fill='dark:#526600' />
                 </div>
                 <div className='flex justify-between items-center'>
                     <div>
@@ -62,10 +62,10 @@ const page = () => {
                 <div className='flex justify-between border-1 border-[#C5C9AD] p-4 rounded items-center bg-white  hover-200
       transition-colors
       duration-200
-      hover:border-[#526600]'>
+      hover:border-[#526600] dark:bg-[#131313]'>
                     <div className='flex justify-start gap-4'>
                          <div className=' bg-[#F2F4F6] rounded p-3'>
-                    <FaLinkedinIn />
+                    <FaLinkedinIn fill='dark:#526600'  />
                 </div>
                 <div className='flex justify-between items-center'>
                     <div>

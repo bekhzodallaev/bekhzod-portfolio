@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #F7F9FB;   /* page */
   --foreground: #000000;
@@ -10,6 +12,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Charter", serif;
+}
+.dark {
+  --background: #131313;
+  --foreground: #F5F5F5;
+  --navbar: #0B0B0B;
+  --accent: #C2EE1B;
 }
 @font-face {
   font-family: "Liberation Mono";

@@ -17,6 +17,7 @@ precision of modern engineering.</p>
       transition-colors
       duration-200
       group
+      dark:bg-[#131313]
      '>
        <div className='w-[50%] rounded border-1 relative overflow-hidden'>
         <img src={featuredPost?.cover} className='  transition-transform
@@ -28,7 +29,7 @@ precision of modern engineering.</p>
        
        '>
          <div className='flex gap-3'>
-            <span className='uppercase bg-[#D4FF33] text-[12px]'>Featured</span>
+            <span className='uppercase bg-[#D4FF33] text-[12px] dark:text-black'>Featured</span>
             {featuredPost?.tags.map((tag, index) =>(
               <span key={tag} className='uppercase text-[12px] font-semibold'>{tag}</span>
             ))}

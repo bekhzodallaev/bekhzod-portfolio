@@ -9,7 +9,7 @@ design and software architecture
 directly in your inbox.</p>
      <form action="" className='flex flex-col gap-3'>
         <input type="email" name="email" id="email"  placeholder='example@gmail.com' className='bg-[#1E293B] rounded pt-2 pb-2 pr-3 pl-3 text-[#6B7280]'/>
-        <button className='bg-[#D4FF33] capitalize pt-2 pb-2 pr-3 pl-3 rounded'>SUBSCRIBE</button>
+        <button className='bg-[#D4FF33] capitalize pt-2 pb-2 pr-3 pl-3 rounded dark:text-black'>SUBSCRIBE</button>
      </form>
     </div>
   )

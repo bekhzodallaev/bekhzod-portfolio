@@ -67,35 +67,35 @@ self-documenting.
   <div className="flex-1 h-[1px] bg-[#C5C9AD]"></div>
 </div>
     <div className='w-full flex justify-evenly mt-3 mb-3 gap-3'>
-      <div className='bg-white border-1 border-[#C5C9AD] rounded pt-3 pb-3 pr-5 pl-5 flex flex-col gap-2'>
+      <div className='bg-white border-1 border-[#C5C9AD] rounded pt-3 pb-3 pr-5 pl-5 flex flex-col gap-2 dark:bg-[#131313]'>
          <FaReact size={25} fill='#526600'/>
         <h3 className='font-semibold'>Frontend Archtiecture</h3>
         <div className='flex gap-3 flex-wrap'>
-            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded'>React</p>
-            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded'>Typescript</p>
-            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded'>Tailwind CSS</p>
-            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded'>Next.js</p>
+            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded dark:bg-[#353534]'>React</p>
+            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded dark:bg-[#353534]'>Typescript</p>
+            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded dark:bg-[#353534]'>Tailwind CSS</p>
+            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded dark:bg-[#353534]'>Next.js</p>
         </div>
       </div>
 
-            <div className='bg-white border-1 border-[#C5C9AD] rounded pt-3 pb-3 pr-5 pl-5 flex flex-col gap-2'>
+            <div className='bg-white border-1 border-[#C5C9AD] rounded pt-3 pb-3 pr-5 pl-5 flex flex-col gap-2 dark:bg-[#131313]'>
           <FaServer size={25} fill='#526600'/>
         <h3 className='font-semibold'>Backend Architecture</h3>
         <div className='flex gap-3 flex-wrap'>
-            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded'>Node.js </p>
-            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded'>PostgreSQL</p>
-            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded'>Redis</p>
-            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded'>MongoDB</p>
+            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded dark:bg-[#353534]'>Node.js </p>
+            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded dark:bg-[#353534]'>PostgreSQL</p>
+            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded dark:bg-[#353534]'>Redis</p>
+            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded dark:bg-[#353534]'>MongoDB</p>
         </div>
       </div>
-            <div className='bg-white border-1 border-[#C5C9AD] rounded pt-3 pb-3 pr-5 pl-5 flex flex-col gap-2'>
+            <div className='bg-white border-1 border-[#C5C9AD] rounded pt-3 pb-3 pr-5 pl-5 flex flex-col gap-2 dark:bg-[#131313]'>
         <FaCloud size={25} fill='#526600'/>
         <h3 className='font-semibold'>Cloud & DevOPs</h3>
         <div className='flex gap-3 flex-wrap'>
-            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded'>Docker</p>
-            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded'>Github Actions</p>
-            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded'>CI/CD</p>
-            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded'>AWS</p>
+            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded dark:bg-[#353534]'>Docker</p>
+            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded dark:bg-[#353534]'>Github Actions</p>
+            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded dark:bg-[#353534]'>CI/CD</p>
+            <p className='bg-[#ECEEF0] pt-1 pb-1 pl-2 pr-2 rounded dark:bg-[#353534]'>AWS</p>
         </div>
       </div>
     </div>

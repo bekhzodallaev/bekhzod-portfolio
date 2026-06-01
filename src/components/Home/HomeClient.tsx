@@ -95,6 +95,7 @@ user experience.</p>
         transition-colors duration-200
         hover:border-[#D4FF33]
         group
+        dark:bg-black
             ">
              <div className="flex gap-3 flex-wrap">
                 {featuredPost?.tags.map((tag, index) => (
