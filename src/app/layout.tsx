@@ -32,7 +32,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
    <body className="min-h-screen flex flex-col">
-  <ThemeProvider attribute="class" enableSystem defaultTheme="system">
+  <ThemeProvider attribute="class" enableSystem={false} defaultTheme="light" >
     <Navbar />
 
     <main className="flex-1 w-full max-w-[1024px] mx-auto px-4 md:px-6">
