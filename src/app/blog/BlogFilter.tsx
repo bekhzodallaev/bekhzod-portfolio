@@ -144,7 +144,7 @@ const BlogFilter = ({ blogs }: BlogFilterProps) => {
               rounded
               ${
                 currentPage === page
-                  ? 'bg-[#D4FF33]'
+                  ? 'bg-[#D4FF33] text-black'
                   : ''
               }
             `}

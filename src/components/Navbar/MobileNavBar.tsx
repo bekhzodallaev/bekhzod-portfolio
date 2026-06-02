@@ -138,11 +138,6 @@ export default function MobileNavbar() {
               h-12
               w-12
               rounded-full
-              border
-              border-gray-200
-              dark:border-gray-700
-              bg-white/80
-              dark:bg-[#0B0B0B]/80
               backdrop-blur-lg
               flex
               items-center
@@ -163,14 +158,9 @@ export default function MobileNavbar() {
             className="
               px-4
               py-3
-              rounded-full
-              border
-              border-gray-200
-              dark:border-gray-700
-              bg-white/80
-              dark:bg-[#0B0B0B]/80
               backdrop-blur-lg
               shadow-lg
+              rounded-full
               text-sm
               font-medium
             "
@@ -185,11 +175,6 @@ export default function MobileNavbar() {
             h-10
             w-10
             rounded-full
-            border
-            border-gray-200
-            dark:border-gray-700
-            bg-white/80
-            dark:bg-[#0B0B0B]/80
             backdrop-blur-lg
             flex
             items-center
