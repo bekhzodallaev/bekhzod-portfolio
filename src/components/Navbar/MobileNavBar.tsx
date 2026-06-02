@@ -175,7 +175,7 @@ export default function MobileNavbar() {
               font-medium
             "
           >
-            Resume
+            <FileText size={16} />
           </a>
         </div>
 
