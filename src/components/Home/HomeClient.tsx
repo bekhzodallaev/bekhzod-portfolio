@@ -156,7 +156,8 @@ const HomeClient = ({ blogs }: HomeClientProps) => {
                 ))}
               </div>
 
-              <h1
+              <Link href={`/blog/${featuredPost?.slug}`}>
+               <h1
                 className="
                   text-[28px]
                   md:text-[36px]
@@ -168,6 +169,7 @@ const HomeClient = ({ blogs }: HomeClientProps) => {
               >
                 {featuredPost?.title}
               </h1>
+              </Link>
 
               <p className="text-[#444934]">
                 {featuredPost?.description}
@@ -221,6 +223,7 @@ const HomeClient = ({ blogs }: HomeClientProps) => {
                 group
                 hover:bg-white
                 hover:text-[#526600]
+                cursor-pointer
               "
               onClick={handleCount}
             >

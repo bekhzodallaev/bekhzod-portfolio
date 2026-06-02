@@ -13,12 +13,13 @@ type ProjectCardType = {
 }
 const ProjectCard = ({image, name, desc, webUrl, githubUrl}:ProjectCardType) => {
   return (
-    <div className='max-w-[450px] relative flex-col mt-4 p-3 gap-4   hover-200
+    <div className='w-full flex relative flex-col mt-4 p-3 gap-4   hover-200
       transition-colors
       duration-200
       group'>
      <div className='relative w-full overflow-hidden'>
        <Image src={image} width={400} height={256}  alt='Project Photo'  className='
+       w-full h-auto
        transition-transform
     duration-300
     group-hover:scale-110'

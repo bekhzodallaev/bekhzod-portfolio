@@ -37,7 +37,8 @@ const Blogs = ({ tags, date, title, slug }: BlogType) => {
         ))}
       </div>
 
-      <h1
+       <Link href={`/blog/${slug}`}>
+        <h1
         className="
           text-[18px]
           transition-colors duration-200
@@ -46,6 +47,7 @@ const Blogs = ({ tags, date, title, slug }: BlogType) => {
       >
         {title}
       </h1>
+       </Link>
 
       <div className="flex gap-3 mt-4">
         <p className="text-[12px] text-[#64748B]">{date}</p>

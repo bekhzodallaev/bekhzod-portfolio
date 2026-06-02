@@ -32,9 +32,22 @@ const BlogList = ({date, type, topic, summary, readingTime, slug}:BlogListType) 
         </div>
           ))}
            </div>
-        <h3 className='text-[24px] font-semibold
-        transition-colors duration-200 group-hover:text-[#526600]
-        '>{topic}</h3>
+       <Link
+  href={`/blog/${slug}`}
+  className='block'
+>
+  <h3
+    className='
+      text-[24px]
+      font-semibold
+      transition-colors
+      duration-200
+      group-hover:text-[#526600]
+    '
+  >
+    {topic}
+  </h3>
+</Link>
         <p className='text-[14px]'>{summary}</p>
         <div className='flex gap-4 items-center'>
           <p className='text-[12px]'>{readingTime}</p>
