@@ -74,6 +74,7 @@ const page = () => {
             fill
             alt="Profile Image"
             className="rounded-lg object-cover object-[78%_50%]"
+            priority
           />
         </div>
       </div>
