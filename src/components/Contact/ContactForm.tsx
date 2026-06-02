@@ -1,5 +1,6 @@
 'use client';
 
+import { CheckCircle2 } from 'lucide-react';
 import React, { useState } from 'react';
 import { MdSend } from 'react-icons/md';
 
@@ -11,6 +12,7 @@ export default function ContactForm() {
   });
 
   const [loading, setLoading] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -47,7 +49,8 @@ export default function ContactForm() {
         message: '',
       });
 
-      alert('Message sent successfully!');
+      setShowSuccessModal(true);
+
     } catch (error) {
       console.error(error);
       alert('Failed to send message');
@@ -57,7 +60,64 @@ export default function ContactForm() {
   };
 
   return (
-   <form
+    <div>
+    {showSuccessModal && (
+  <div
+    className="
+      fixed
+    inset-0
+    z-[9999]
+    flex
+    items-center
+    justify-center
+    bg-black/50
+    backdrop-blur-sm
+    "
+  >
+    <div
+      className="
+        bg-white
+    dark:bg-[#131313]
+    border
+    border-[#C5C9AD]
+    rounded-xl
+    p-6
+    w-[90%]
+    max-w-md
+    text-center
+    text-black
+    dark:text-white
+      "
+    >
+    <div className="flex flex-col items-center mb-3">
+  <CheckCircle2
+    size={48}
+    className="text-[#526600] mb-2"
+  />
+
+  <h2 className="text-2xl font-bold">
+    Message Sent
+  </h2>
+</div>
+      <button
+        onClick={() => setShowSuccessModal(false)}
+        className="
+        bg-[#D4FF33]
+    text-[#5E7400]
+    px-4
+    py-2
+    rounded
+    font-medium
+    hover:bg-[#acc92b]
+    transition-colors
+        "
+      >
+        Close
+      </button>
+    </div>
+  </div>
+)}
+ <form
   onSubmit={handleSubmit}
   className="
     border-1
@@ -69,7 +129,6 @@ export default function ContactForm() {
     flex-col
     gap-3
     w-full
-    lg:w-[60%]
     self-start
     dark:bg-[#131313]
   "
@@ -206,5 +265,7 @@ export default function ContactForm() {
     <MdSend fill="#5E7400" />
   </button>
 </form>
+    </div>
+  
   );
 }
