@@ -143,6 +143,11 @@ export default function MobileNavbar() {
               items-center
               justify-center
               shadow-lg
+              border
+              border-gray-200
+              dark:border-gray-700
+              bg-white/80
+              dark:bg-[#0B0B0B]/80
             "
           >
             {resolvedTheme === 'dark' ? (
@@ -156,13 +161,22 @@ export default function MobileNavbar() {
             href="/resume.pdf"
             download
             className="
-              px-4
-              py-3
-              backdrop-blur-lg
-              shadow-lg
-              rounded-full
-              text-sm
-              font-medium
+            w-12
+            h-12
+    rounded-full
+    border
+    border-gray-200
+    dark:border-gray-700
+    bg-white/80
+    dark:bg-[#0B0B0B]/80
+    backdrop-blur-lg
+    shadow-lg
+    text-sm
+    font-medium
+    flex
+    items-center
+    justify-center
+    gap-2
             "
           >
             <FileText size={16} />
@@ -180,6 +194,11 @@ export default function MobileNavbar() {
             items-center
             justify-center
             shadow-lg
+            border
+border-gray-200
+dark:border-gray-700
+bg-white/80
+dark:bg-[#0B0B0B]/80
           "
         >
           {isOpen ? (
