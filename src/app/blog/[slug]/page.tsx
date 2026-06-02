@@ -23,7 +23,7 @@ const Page = async ({ params }: Props) => {
               <span>/</span>
              <span>{post.metadata.readingTime}</span>
       </div>
-      <h1 className="text-[36px] font-bold">{post.metadata.title}</h1>
+      <h1 className="font-bold text-[28px] md:text-[36px]">{post.metadata.title}</h1>
       <p className="text-[20px] mb-2">{post.metadata.description}</p>
       
       <MDXRemote source={post.content}/>
