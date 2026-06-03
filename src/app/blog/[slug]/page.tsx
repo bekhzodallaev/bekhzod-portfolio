@@ -1,6 +1,7 @@
 import { getPostBySlug } from "@/src/lib/blog/getAllPosts";
 import Button from "@/src/components/Button/Button";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import Modal from "@/src/components/Modal/Modal";
 
 type Props = {
   params: Promise<{
@@ -26,7 +27,10 @@ const Page = async ({ params }: Props) => {
       <h1 className="font-bold text-[28px] md:text-[36px]">{post.metadata.title}</h1>
       <p className="text-[20px] mb-2">{post.metadata.description}</p>
       
-      <MDXRemote source={post.content}/>
+      <div className="mb-15">
+      <MDXRemote source={post.content} />
+      </div>
+             <Modal />
           </article>
   );
 };
