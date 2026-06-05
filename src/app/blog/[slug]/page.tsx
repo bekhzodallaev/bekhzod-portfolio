@@ -12,6 +12,7 @@ type Props = {
 const Page = async ({ params }: Props) => {
   const { slug } = await params;
   const post = getPostBySlug(slug);
+
   if (!post) {
     return <div>Post not found</div>;
   }
@@ -19,19 +20,27 @@ const Page = async ({ params }: Props) => {
   return (
     <article className="mt-[2rem]">
       <Button />
-      <div className="flex gap-3 mb-3  text-[#5D6D84]">
-              <span>{post.metadata.date}</span>
-              <span>/</span>
-             <span>{post.metadata.readingTime}</span>
+
+      <div className="flex gap-3 mb-3 text-sm text-[#5D6D84]">
+        <span>{post.metadata.date}</span>
+        <span>/</span>
+        <span>{post.metadata.readingTime}</span>
       </div>
-      <h1 className="font-bold text-[28px] md:text-[36px]">{post.metadata.title}</h1>
-      <p className="text-[20px] mb-2">{post.metadata.description}</p>
-      
+
+      <h1 className="font-bold text-3xl md:text-[36px]">
+        {post.metadata.title}
+      </h1>
+
+      <p className="text-xl mb-2">
+        {post.metadata.description}
+      </p>
+
       <div className="mb-15">
-      <MDXRemote source={post.content} />
+        <MDXRemote source={post.content} />
       </div>
-             <Modal />
-          </article>
+
+      <Modal />
+    </article>
   );
 };
 

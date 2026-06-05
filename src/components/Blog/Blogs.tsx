@@ -26,10 +26,10 @@ const Blogs = ({ tags, date, title, slug }: BlogType) => {
         dark:bg-black
       "
     >
-      <div className="flex gap-3">
+      <div className="flex gap-3 flex-wrap">
         {tags.map((t, index) => (
           <p
-            className="text-[12px] capitalize text-[#526600]"
+            className="text-xs capitalize text-[#526600]"
             key={index}
           >
             {t}
@@ -37,20 +37,20 @@ const Blogs = ({ tags, date, title, slug }: BlogType) => {
         ))}
       </div>
 
-       <Link href={`/blog/${slug}`}>
+      <Link href={`/blog/${slug}`}>
         <h1
-        className="
-          text-[18px]
-          transition-colors duration-200
-          group-hover:text-[#526600]
-        "
-      >
-        {title}
-      </h1>
-       </Link>
+          className="
+            text-lg
+            transition-colors duration-200
+            group-hover:text-[#526600]
+          "
+        >
+          {title}
+        </h1>
+      </Link>
 
-      <div className="flex gap-3 mt-4">
-        <p className="text-[12px] text-[#64748B]">{date}</p>
+      <div className="flex gap-3 mt-4 items-center">
+        <p className="text-sm text-[#64748B]">{date}</p>
 
         <Link href={`/blog/${slug}`}>
           <GrFormNextLink />

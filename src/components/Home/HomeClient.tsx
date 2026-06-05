@@ -45,7 +45,7 @@ const HomeClient = ({ blogs }: HomeClientProps) => {
       {/* Hero Section */}
       <div className="flex flex-col-reverse md:flex-row justify-between gap-6">
         <div className="w-full md:w-[65%]">
-          <h1 className="text-[28px] md:text-[36px] font-bold">
+          <h1 className="text-3xl md:text-[36px] font-bold">
             Engineering scalable systems with
             <span
               className="
@@ -65,7 +65,7 @@ const HomeClient = ({ blogs }: HomeClientProps) => {
             and precision.
           </h1>
 
-          <p className="text-[#444934] mt-[2rem]">
+          <p className="text-base text-[#444934] mt-[2rem]">
             I'm a Full-Stack Engineer specializing in TypeScript, Go, and
             Distributed Systems. Currently building high-performance interfaces
             at the intersection of technical utility and user experience.
@@ -107,11 +107,12 @@ const HomeClient = ({ blogs }: HomeClientProps) => {
           {/* Featured Article */}
           <div className="w-full md:w-[60%]">
             <div className="flex items-center justify-between mb-3">
-              <h1 className="text-[24px]">Featured Article</h1>
+              <h1 className="text-xl md:text-[24px]">Featured Article</h1>
 
               <Link
                 href="/blog"
                 className="
+                  text-sm
                   text-[#526600]
                   border-b
                   border-transparent
@@ -145,7 +146,7 @@ const HomeClient = ({ blogs }: HomeClientProps) => {
                     key={tag}
                     className={`
                       ${tagColors[index % tagColors.length]}
-                      text-[12px]
+                      text-xs
                       px-2
                       py-1
                       rounded
@@ -159,7 +160,7 @@ const HomeClient = ({ blogs }: HomeClientProps) => {
               <Link href={`/blog/${featuredPost?.slug}`}>
                <h1
                 className="
-                  text-[28px]
+                  text-2xl
                   md:text-[36px]
                   font-bold
                   transition-colors
@@ -171,12 +172,12 @@ const HomeClient = ({ blogs }: HomeClientProps) => {
               </h1>
               </Link>
 
-              <p className="text-[#444934]">
+              <p className="text-[#444934] text-base">
                 {featuredPost?.description}
               </p>
 
               <div className="flex gap-3 items-center mt-3">
-                <p>
+                <p className='text-sm'>
                   {featuredPost?.date} / {featuredPost?.readingTime}
                 </p>
 
@@ -189,7 +190,7 @@ const HomeClient = ({ blogs }: HomeClientProps) => {
 
           {/* Technical Logs */}
           <div className="w-full md:w-[40%]">
-            <h1 className="text-[24px] mb-3">Technical Logs</h1>
+            <h1 className=" text-xl md:text-[24px] mb-3">Technical Logs</h1>
 
             <div className="max-h-[400px] md:max-h-[320px] overflow-y-auto">
               {blogs.slice(0, count).map((blog) => (
@@ -224,6 +225,7 @@ const HomeClient = ({ blogs }: HomeClientProps) => {
                 hover:bg-white
                 hover:text-[#526600]
                 cursor-pointer
+                text-base
               "
               onClick={handleCount}
             >

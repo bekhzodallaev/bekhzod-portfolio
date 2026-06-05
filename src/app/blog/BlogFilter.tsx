@@ -48,9 +48,9 @@ const BlogFilter = ({ blogs }: BlogFilterProps) => {
     <div>
       {/* Header */}
       <div className="flex flex-col md:flex-row md:justify-between md:items-center mt-5 gap-3">
-        <h3 className="text-[12px]">RECENT BLOGS</h3>
+        <h3 className="text-xs">RECENT BLOGS</h3>
 
-        <div className="flex flex-wrap gap-2 items-center text-[12px] text-[#5D6D84]">
+        <div className="flex flex-wrap gap-2 items-center text-sm text-[#5D6D84]">
           <button
             onClick={() => handleCategoryChange('All')}
             className={`cursor-pointer transition-colors duration-200 ${
@@ -109,6 +109,7 @@ const BlogFilter = ({ blogs }: BlogFilterProps) => {
           disabled={currentPage === 1}
           onClick={() => setCurrentPage((prev) => prev - 1)}
           className="
+            text-sm
             border border-[#C5C9AD]
             px-3 md:px-4 py-2
             transition duration-200
@@ -133,6 +134,7 @@ const BlogFilter = ({ blogs }: BlogFilterProps) => {
             key={page}
             onClick={() => setCurrentPage(page)}
             className={`
+              text-sm
               border border-[#C5C9AD]
               px-3 md:px-4 py-2
               transition duration-200
@@ -159,6 +161,7 @@ const BlogFilter = ({ blogs }: BlogFilterProps) => {
             setCurrentPage((prev) => prev + 1)
           }
           className="
+            text-sm
             border border-[#C5C9AD]
             px-3 md:px-4 py-2
             transition duration-200

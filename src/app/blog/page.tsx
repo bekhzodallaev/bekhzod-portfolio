@@ -8,11 +8,11 @@ const page = () => {
 
   return (
     <div className="mt-[2rem]">
-      <h1 className="font-bold text-[28px] md:text-[36px]">
+      <h1 className="font-bold text-3xl md:text-[36px]">
         Writing & Technical Insights
       </h1>
 
-      <p className="text-[#444934]">
+      <p className="text-base text-[#444934]">
         A collection of thoughts on software architecture, frontend
         performance, and the clinical precision of modern engineering.
       </p>
@@ -57,14 +57,14 @@ const page = () => {
 
         <div className="flex flex-col gap-3 w-full">
           <div className="flex gap-3 flex-wrap">
-            <span className="uppercase bg-[#D4FF33] text-[12px] dark:text-black">
+            <span className="uppercase bg-[#D4FF33] text-xs dark:text-black">
               Featured
             </span>
 
             {featuredPost?.tags.map((tag) => (
               <span
                 key={tag}
-                className="uppercase text-[12px] font-semibold"
+                className="uppercase text-xs font-semibold"
               >
                 {tag}
               </span>
@@ -73,7 +73,7 @@ const page = () => {
 
           <h2
             className="
-              text-[20px]
+              text-xl
               md:text-[24px]
               font-bold
               transition-colors
@@ -84,11 +84,11 @@ const page = () => {
             {featuredPost?.title}
           </h2>
 
-          <p className="text-[14px] text-[#444934]">
+          <p className="text-base text-[#444934]">
             {featuredPost?.description}
           </p>
 
-          <div>
+          <div className="text-sm">
             <span>{featuredPost?.date}</span>
             <span> / </span>
             <span>{featuredPost?.readingTime}</span>

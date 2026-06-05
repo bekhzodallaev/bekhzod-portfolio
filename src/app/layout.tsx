@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "DevGuru",
-  description: "Yeah, you are in a correct spot.",
+  description: "DevGuru is a perfect spot for easier software development",
 };
 
 export default function RootLayout({
