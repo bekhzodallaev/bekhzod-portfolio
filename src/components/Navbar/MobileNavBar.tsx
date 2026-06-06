@@ -26,22 +26,27 @@ export default function MobileNavbar() {
   const links = [
     {
       href: '/',
+      label: 'Home',
       icon: House,
     },
     {
       href: '/about',
+      label: 'About',
       icon: UserRound,
     },
     {
       href: '/blog',
+      label: 'Blog',
       icon: LibraryBig,
     },
     {
       href: '/projects',
+      label: 'Work',
       icon: FolderKanban,
     },
     {
       href: '/contact',
+      label: 'Contact',
       icon: Mail,
     },
   ];
@@ -72,19 +77,22 @@ export default function MobileNavbar() {
             flex
             items-center
             justify-center
-            gap-8
+            gap-6
           "
         >
-          {links.map(({ href, icon: Icon }) => (
+          {links.map(({ href, label, icon: Icon }) => (
             <Link
               key={href}
               href={href}
               className={`
                 relative
                 h-full
+                min-w-[48px]
                 flex
+                flex-col
                 items-center
                 justify-center
+                gap-1
                 transition-colors
                 duration-200
                 ${
@@ -107,7 +115,11 @@ export default function MobileNavbar() {
                 />
               )}
 
-              <Icon size={22} />
+              <Icon size={20} />
+
+              <span className="text-[10px] font-medium">
+                {label}
+              </span>
             </Link>
           ))}
         </div>
