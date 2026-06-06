@@ -37,7 +37,7 @@ const page = () => {
         "
       >
         <div className="w-full md:w-[50%] self-start">
-          <p className="bg-[#D4FF33] text-xs inline-block">
+          <p className="bg-[#D4FF33] text-xs inline-block dark:text-black pl-1 pr-1">
             LATEST
           </p>
 

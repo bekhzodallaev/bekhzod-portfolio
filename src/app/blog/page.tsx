@@ -57,7 +57,7 @@ const page = () => {
 
         <div className="flex flex-col gap-3 w-full">
           <div className="flex gap-3 flex-wrap">
-            <span className="uppercase bg-[#D4FF33] text-xs dark:text-black">
+            <span className="uppercase bg-[#D4FF33] text-xs dark:text-black pl-1 pr-1">
               Featured
             </span>
 

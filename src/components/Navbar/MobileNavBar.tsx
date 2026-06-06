@@ -4,15 +4,16 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
 import {
-  Home,
-  User,
-  FileText,
+  House,
+  UserRound,
+  LibraryBig,
   FolderKanban,
   Mail,
   Moon,
   Sun,
   ChevronLeft,
   ChevronRight,
+  FileText,
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -25,83 +26,94 @@ export default function MobileNavbar() {
   const links = [
     {
       href: '/',
-      label: 'Home',
-      icon: Home,
+      icon: House,
     },
     {
       href: '/about',
-      label: 'About',
-      icon: User,
+      icon: UserRound,
     },
     {
       href: '/blog',
-      label: 'Blog',
-      icon: FileText,
+      icon: LibraryBig,
     },
     {
       href: '/projects',
-      label: 'Projects',
       icon: FolderKanban,
     },
     {
       href: '/contact',
-      label: 'Contact',
       icon: Mail,
     },
   ];
 
   return (
     <>
+      {/* Bottom Navigation */}
       <nav
         className="
           md:hidden
           fixed
-          bottom-6
-          left-1/2
-          -translate-x-1/2
+          bottom-0
+          left-0
+          right-0
           z-50
+          border-t
+          border-[#C5C9AD]
+          bg-[#FAFAF7]/95
+          dark:bg-[#0B0B0B]/95
+          backdrop-blur-xl
         "
       >
         <div
           className="
+            h-16
+            max-w-md
+            mx-auto
             flex
             items-center
-            gap-5
-            px-6
-            py-3
-            rounded-full
-            border
-            border-gray-200
-            dark:border-gray-700
-            backdrop-blur-lg
-            bg-white/80
-            dark:bg-[#0B0B0B]/80
-            shadow-lg
+            justify-center
+            gap-8
           "
         >
-          {links.map(({ href, label, icon: Icon }) => (
+          {links.map(({ href, icon: Icon }) => (
             <Link
               key={href}
               href={href}
               className={`
+                relative
+                h-full
                 flex
-                flex-col
                 items-center
-                text-xs
+                justify-center
                 transition-colors
+                duration-200
                 ${
                   pathname === href
-                    ? 'text-[#A3E635]'
-                    : 'text-gray-500 dark:text-gray-400'
+                    ? 'text-[#526600]'
+                    : 'text-[#64748B] dark:text-[#94A3B8]'
                 }
               `}
             >
-              <Icon size={20} />
-              <span>{label}</span>
+              {pathname === href && (
+                <span
+                  className="
+                    absolute
+                    top-0
+                    left-0
+                    right-0
+                    h-[2px]
+                    bg-[#526600]
+                  "
+                />
+              )}
+
+              <Icon size={22} />
             </Link>
           ))}
         </div>
       </nav>
+
+      {/* Theme + Resume Controls */}
       <div
         className="
           md:hidden
@@ -132,22 +144,24 @@ export default function MobileNavbar() {
         >
           <button
             onClick={() =>
-              setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
+              setTheme(
+                resolvedTheme === 'dark'
+                  ? 'light'
+                  : 'dark'
+              )
             }
             className="
               h-12
               w-12
-              rounded-full
-              backdrop-blur-lg
+              rounded-xl
+              border
+              border-[#C5C9AD]
+              backdrop-blur-xl
               flex
               items-center
               justify-center
-              shadow-lg
-              border
-              border-gray-200
-              dark:border-gray-700
-              bg-white/80
-              dark:bg-[#0B0B0B]/80
+              bg-white/90
+              dark:bg-[#0B0B0B]/90
             "
           >
             {resolvedTheme === 'dark' ? (
@@ -161,25 +175,20 @@ export default function MobileNavbar() {
             href="/resume.pdf"
             download
             className="
-            w-12
-            h-12
-    rounded-full
-    border
-    border-gray-200
-    dark:border-gray-700
-    bg-white/80
-    dark:bg-[#0B0B0B]/80
-    backdrop-blur-lg
-    shadow-lg
-    text-sm
-    font-medium
-    flex
-    items-center
-    justify-center
-    gap-2
+              h-12
+              w-12
+              rounded-xl
+              border
+              border-[#C5C9AD]
+              backdrop-blur-xl
+              flex
+              items-center
+              justify-center
+              bg-white/90
+              dark:bg-[#0B0B0B]/90
             "
           >
-            <FileText size={16} />
+            <FileText size={20} />
           </a>
         </div>
 
@@ -188,17 +197,15 @@ export default function MobileNavbar() {
           className="
             h-10
             w-10
-            rounded-full
-            backdrop-blur-lg
+            rounded-xl
+            border
+            border-[#C5C9AD]
+            backdrop-blur-xl
             flex
             items-center
             justify-center
-            shadow-lg
-            border
-border-gray-200
-dark:border-gray-700
-bg-white/80
-dark:bg-[#0B0B0B]/80
+            bg-white/90
+            dark:bg-[#0B0B0B]/90
           "
         >
           {isOpen ? (
