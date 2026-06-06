@@ -41,7 +41,7 @@ export default function MobileNavbar() {
     },
     {
       href: '/projects',
-      label: 'Work',
+      label: 'Projects',
       icon: FolderKanban,
     },
     {
@@ -184,7 +184,7 @@ export default function MobileNavbar() {
           </button>
 
           <a
-            href="/resume.pdf"
+            href="/CV.pdf"
             download
             className="
               h-12

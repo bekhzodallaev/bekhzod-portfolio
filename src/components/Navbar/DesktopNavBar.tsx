@@ -78,7 +78,7 @@ const DesktopNavbar = () => {
           </button>
 
           <a
-            href="/resume.pdf"
+            href="/CV.pdf"
             download
             className="bg-[#D4FF33] text-[#0F172A] px-4 py-2 rounded-md font-medium transition-all duration-200 hover:brightness-110"
           >
