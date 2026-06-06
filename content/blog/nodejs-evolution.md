@@ -3,7 +3,7 @@ title: "Why Tech Giants Moved to Node.js"
 description: "Discover why companies like Netflix, PayPal, and LinkedIn adopted Node.js and how it helped them improve performance, scalability, and developer productivity."
 date: "2025-06-20"
 tags: ["Backend"]
-cover: "/blog/nodejs-tech-giants.jpg"
+cover: ""
 featured: false
 category: "Technical"
 ---

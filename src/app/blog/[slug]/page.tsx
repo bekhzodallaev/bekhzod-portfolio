@@ -2,6 +2,7 @@ import { getPostBySlug } from "@/src/lib/blog/getAllPosts";
 import Button from "@/src/components/Button/Button";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Modal from "@/src/components/Modal/Modal";
+import Image from "next/image";
 
 type Props = {
   params: Promise<{
@@ -27,15 +28,27 @@ const Page = async ({ params }: Props) => {
         <span>{post.metadata.readingTime}</span>
       </div>
 
-      <h1 className="font-bold text-3xl md:text-[36px]">
+      <h1 className="font-bold text-3xl md:text-[36px] mb-6">
         {post.metadata.title}
       </h1>
 
-      <p className="text-xl mb-2">
+      <p className="text-xl mb-4">
         {post.metadata.description}
       </p>
 
-      <div className="mb-15">
+      {post.metadata.cover?.trim() && (
+  <div className="relative w-full h-[220px] md:h-[450px] mt-4 mb-6 overflow-hidden rounded-lg">
+    <Image
+      src={post.metadata.cover}
+      alt={post.metadata.title}
+      fill
+      className="object-contain"
+      priority
+    />
+  </div>
+)}
+
+      <div className="mb-16">
         <MDXRemote source={post.content} />
       </div>
 

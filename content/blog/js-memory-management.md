@@ -3,7 +3,7 @@ title: "JavaScript Memory Management: Lessons from C"
 description: "Learn how JavaScript manages memory automatically through reachability, garbage collection, and engine optimizations."
 date: "2025-06-12"
 tags: ["Frontend"]
-cover: "/blog/javascript-memory-management.jpg"
+cover: ""
 featured: false
 category: "Technical"
 ---

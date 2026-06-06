@@ -3,7 +3,7 @@ title: "Advanced Git Commands Every Developer Should Know"
 description: "Learn advanced Git commands such as stash, reset, rebase, bisect, grep, and diff to improve your workflow and maintain a cleaner project history."
 date: "2025-07-13"
 tags: ["Backend"]
-cover: "/blog/git-advanced.jpg"
+cover: ""
 featured: false
 category: "Technical"
 ---

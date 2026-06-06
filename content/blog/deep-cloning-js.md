@@ -3,7 +3,7 @@ title: "Deep Cloning in JavaScript"
 description: "Learn the differences between JSON.parse/JSON.stringify, structuredClone, and custom deep cloning approaches in JavaScript."
 date: "2025-07-05"
 tags: ["Frontend"]
-cover: "/blog/deep-cloning.jpg"
+cover: ""
 featured: false
 category: "Technical"
 ---
