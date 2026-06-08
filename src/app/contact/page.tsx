@@ -74,7 +74,7 @@ const page = () => {
               <HiOutlineExternalLink
                 stroke="#757961"
                 size={20}
-                className="hover-200 transition-colors duration-200 hover:stroke-[#526600]"
+                className="hover-200 transition-colors duration-200 hover:stroke-[#526600] ml-3"
               />
             </a>
           </div>
@@ -106,7 +106,7 @@ const page = () => {
               <HiOutlineExternalLink
                 stroke="#757961"
                 size={20}
-                className="hover-200 transition-colors duration-200 hover:stroke-[#526600] mr-3"
+                className="hover-200 transition-colors duration-200 hover:stroke-[#526600] ml-3"
               />
             </a>
           </div>
