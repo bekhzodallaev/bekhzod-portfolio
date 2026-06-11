@@ -1,6 +1,7 @@
 import BlogList from '@/src/components/Blog/BlogList';
 import { getAllPosts } from '@/src/lib/blog/getAllPosts';
 import BlogFilter from './BlogFilter';
+import Link from 'next/link';
 
 const page = () => {
   const posts = getAllPosts();
@@ -70,8 +71,9 @@ const page = () => {
               </span>
             ))}
           </div>
-
-          <h2
+         
+        <Link href={`/blog/${featuredPost?.slug}`}>
+         <h2
             className="
               text-xl
               md:text-[24px]
@@ -80,10 +82,13 @@ const page = () => {
               duration-200
               group-hover:text-[#526600]
             "
+            
           >
             {featuredPost?.title}
           </h2>
 
+        </Link>
+          
           <p className="text-base text-[#444934]">
             {featuredPost?.description}
           </p>
