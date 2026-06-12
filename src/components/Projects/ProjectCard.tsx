@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { TbExternalLink } from 'react-icons/tb';
 import { FaCode } from 'react-icons/fa';
@@ -18,6 +20,8 @@ const ProjectCard = ({
   webUrl,
   githubUrl,
 }: ProjectCardType) => {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <div
       className="
@@ -34,7 +38,7 @@ const ProjectCard = ({
         group
       "
     >
-      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full overflow-hidden rounded-lg">
         <Image
           src={image}
           width={400}
@@ -64,34 +68,65 @@ const ProjectCard = ({
         {name}
       </h3>
 
-      <p className="text-base line-clamp-4">
-        {desc}
-      </p>
+      <div>
+        <p
+          className={`text-base transition-all duration-300 ${
+            expanded ? '' : 'line-clamp-4'
+          }`}
+        >
+          {desc}
+        </p>
+
+        {desc.length > 180 && (
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="
+              mt-2
+              text-sm
+              text-[#526600]
+              hover:underline
+              cursor-pointer
+            "
+          >
+            {expanded ? 'Show Less' : 'Read More'}
+          </button>
+        )}
+      </div>
 
       <div className="flex justify-evenly mt-5 text-sm">
-        <div className="flex gap-3 items-center">
-          <a
-            href={webUrl}
-            className="flex gap-3 items-center transition-colors duration-200 hover:text-[#526600]"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <TbExternalLink />
-            Live Demo
-          </a>
-        </div>
+        <a
+          href={webUrl}
+          className="
+            flex
+            gap-3
+            items-center
+            transition-colors
+            duration-200
+            hover:text-[#526600]
+          "
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <TbExternalLink />
+          Live Demo
+        </a>
 
-        <div className="flex gap-3 items-center">
-          <a
-            href={githubUrl}
-            className="flex gap-3 items-center transition-colors duration-200 hover:text-[#526600]"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaCode />
-            View Code
-          </a>
-        </div>
+        <a
+          href={githubUrl}
+          className="
+            flex
+            gap-3
+            items-center
+            transition-colors
+            duration-200
+            hover:text-[#526600]
+          "
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaCode />
+          View Code
+        </a>
       </div>
     </div>
   );
