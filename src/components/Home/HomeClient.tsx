@@ -32,17 +32,26 @@ const tagColors = [
 ];
 
 const HomeClient = ({ blogs }: HomeClientProps) => {
+
   const [count, setCount] = useState(3);
+  const [loading, setLoading] = useState(false);
 
   function handleCount() {
-    setCount((prev) => prev + 1);
+
+    if(count >= blogs.length) return;
+
+    setLoading(true);
+    setTimeout(() => {
+    setCount((prev) => Math.min(prev + 2, blogs.length));
+    setLoading(false);
+    }, 700);
+
   }
 
   const featuredPost = blogs.find((post) => post.featured);
 
   return (
     <div className="w-full mt-[2rem]">
-      {/* Hero Section */}
       <div className="flex flex-col-reverse md:flex-row justify-between gap-6">
         <div className="w-full md:w-[65%]">
           <h1 className="text-3xl md:text-[36px] font-bold">
@@ -204,7 +213,8 @@ const HomeClient = ({ blogs }: HomeClientProps) => {
               ))}
             </div>
 
-            <button
+            {count < blogs.length && (
+                  <button
               className="
                 capitalize
                 border
@@ -228,9 +238,11 @@ const HomeClient = ({ blogs }: HomeClientProps) => {
                 text-base
               "
               onClick={handleCount}
+              disabled={loading}
             >
-              LOAD MORE LOGS
+             {loading ? "LOADING...": " LOAD MORE LOGS"}
             </button>
+            )}
 
             <Modal />
           </div>
