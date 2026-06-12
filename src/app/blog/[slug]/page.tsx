@@ -1,8 +1,8 @@
-import { getPostBySlug } from "@/src/lib/blog/getAllPosts";
-import Button from "@/src/components/Button/Button";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import Modal from "@/src/components/Modal/Modal";
-import Image from "next/image";
+import { getPostBySlug } from '@/src/lib/blog/getAllPosts';
+import Button from '@/src/components/Button/Button';
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import Modal from '@/src/components/Modal/Modal';
+import Image from 'next/image';
 
 type Props = {
   params: Promise<{
@@ -19,36 +19,47 @@ const Page = async ({ params }: Props) => {
   }
 
   return (
-    <article className="mt-[2rem]">
+    <article className="mt-8 max-w-4xl mx-auto px-4 sm:px-6">
       <Button />
 
-      <div className="flex gap-3 mb-3 text-sm text-[#5D6D84]">
+      <div className="flex flex-wrap gap-2 mb-4 text-sm text-[#5D6D84]">
         <span>{post.metadata.date}</span>
         <span>/</span>
         <span>{post.metadata.readingTime}</span>
       </div>
 
-      <h1 className="font-bold text-3xl md:text-[36px] mb-6">
+      <h1 className="font-bold text-3xl md:text-[36px] leading-tight mb-6">
         {post.metadata.title}
       </h1>
 
-      <p className="text-xl mb-4">
+      <p className="text-base sm:text-lg md:text-xl text-[#444934] mb-6">
         {post.metadata.description}
       </p>
 
       {post.metadata.cover?.trim() && (
-  <div className="relative w-full h-[220px] md:h-[450px] mt-4 mb-6 overflow-hidden rounded-lg">
-    <Image
-      src={post.metadata.cover}
-      alt={post.metadata.title}
-      fill
-      className="object-contain"
-      priority
-    />
-  </div>
-)}
+        <div className="relative w-full aspect-[16/9] mt-4 mb-8 overflow-hidden rounded-lg">
+          <Image
+            src={post.metadata.cover}
+            alt={post.metadata.title}
+            fill
+            sizes="(max-width: 768px) 100vw, 1024px"
+            className="object-cover"
+            priority
+          />
+        </div>
+      )}
 
-      <div className="mb-16">
+      <div
+        className="
+          prose
+          prose-sm
+          sm:prose-base
+          lg:prose-lg
+          max-w-none
+          mb-16
+          dark:prose-invert
+        "
+      >
         <MDXRemote source={post.content} />
       </div>
 

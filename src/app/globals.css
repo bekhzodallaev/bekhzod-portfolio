@@ -3,9 +3,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #F7F9FB;   /* page */
+  --background: #F7F9FB;
   --foreground: #000000;
-  --navbar: #ffffff;       /* navbar */
+  --navbar: #ffffff;  
 }
 
 html {
