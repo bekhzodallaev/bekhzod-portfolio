@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { Moon, Sun } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import { FaCameraRetro } from "react-icons/fa6";
 
 const DesktopNavbar = () => {
   const { resolvedTheme, setTheme } = useTheme();
@@ -44,7 +45,7 @@ const DesktopNavbar = () => {
         </Link>
 
         {/* Navigation */}
-        <div className="flex gap-8">
+        <div className="flex gap-8 items-center justify-center">
           <Link href="/" className={navLinkClass('/')}>
             Home
           </Link>
@@ -63,6 +64,10 @@ const DesktopNavbar = () => {
 
           <Link href="/contact" className={navLinkClass('/contact')}>
             Contact
+          </Link>
+
+           <Link href="/gallery" className={navLinkClass('/gallery')}>
+            <FaCameraRetro size={20} />
           </Link>
         </div>
 

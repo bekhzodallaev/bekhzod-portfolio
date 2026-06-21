@@ -16,6 +16,8 @@ import {
   FileText,
 } from 'lucide-react';
 import { useState } from 'react';
+import { FaCameraRetro } from "react-icons/fa6";
+
 
 export default function MobileNavbar() {
   const pathname = usePathname();
@@ -48,6 +50,10 @@ export default function MobileNavbar() {
       href: '/contact',
       label: 'Contact',
       icon: Mail,
+    },
+    {
+      href: '/gallery',
+      icon: FaCameraRetro,
     },
   ];
 
