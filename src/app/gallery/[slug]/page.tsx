@@ -1,6 +1,7 @@
 import { getPhotoBySlug } from "@/src/lib/photos/photoGallery";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import Button from '@/src/components/Button/Button';
+import Button from "@/src/components/Button/Button";
+import { mdxComponents } from "@/src/components/Gallery/MdxComponents";
 
 type Props = {
   params: Promise<{
@@ -14,18 +15,41 @@ const Page = async ({ params }: Props) => {
   const photo = getPhotoBySlug(slug);
 
   return (
-    <main className="mx-auto max-w-4xl px-6 py-12">
-        <Button />
-      <h1 className="mb-2 text-4xl font-bold">
-        {photo.frontmatter.title}
-      </h1>
+    <main className="mx-auto max-w-3xl px-6 py-12">
+      <Button />
 
-      <p className="mb-8 text-muted-foreground">
-        {photo.frontmatter.location} · {photo.frontmatter.date}
-      </p>
+      <header className="mb-12">
+        <h1 className="mb-3 text-4xl font-bold">
+          {photo.frontmatter.title}
+        </h1>
 
-      <article className="prose prose-lg dark:prose-invert max-w-none">
-        <MDXRemote source={photo.content} />
+        <p className="text-muted-foreground">
+          {photo.frontmatter.location} · {photo.frontmatter.date}
+        </p>
+      </header>
+
+      <article
+        className="
+          prose
+          prose-lg
+          dark:prose-invert
+
+          max-w-none
+
+          prose-p:leading-8
+          prose-p:text-muted-foreground
+
+          prose-headings:font-bold
+          prose-headings:text-foreground
+
+          prose-img:rounded-2xl
+          prose-img:my-12
+        "
+      >
+        <MDXRemote
+          source={photo.content}
+          components={mdxComponents}
+        />
       </article>
     </main>
   );

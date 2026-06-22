@@ -53,6 +53,7 @@ export default function MobileNavbar() {
     },
     {
       href: '/gallery',
+      label:'Gallery',
       icon: FaCameraRetro,
     },
   ];
@@ -78,12 +79,11 @@ export default function MobileNavbar() {
         <div
           className="
             h-16
-            max-w-md
-            mx-auto
-            flex
-            items-center
-            justify-center
-            gap-6
+    w-full
+    flex
+    items-center
+    justify-around
+    px-2
           "
         >
           {links.map(({ href, label, icon: Icon }) => (
